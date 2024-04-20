@@ -74,7 +74,9 @@ app.get("/services/:service", (req, res) => {
   );
 
   if (!serviceData) {
-    return res.status(404).render("404", { title: "Servicio no Encontrado" });
+    return res
+      .status(404)
+      .render("404", { title_error: "Servicio no Encontrado" });
   }
   res.render("service", { service: serviceData });
 });
