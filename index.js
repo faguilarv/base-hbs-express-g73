@@ -67,10 +67,13 @@ app.get("/services", (req, res) => {
 });
 
 app.get("/services/:service", (req, res) => {
-  const services = req.params;
+  const service = req.params.service;
 
   const serviceData = services.find(
-    (servicio) => servicio.url === `/services/${service}`
+    (servicio) =>
+      servicio.url ===
+      `/services/$
+    {service}`
   );
 
   if (!serviceData) {
