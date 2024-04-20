@@ -66,8 +66,8 @@ app.get("/services", (req, res) => {
   res.render("services", { services });
 });
 
-app.get("/services/:name", (req, res) => {
-  const services = req.params.name;
+app.get("/services/:service", (req, res) => {
+  const services = req.params;
 
   const serviceData = services.find(
     (servicio) => servicio.url === `/services/${service}`
