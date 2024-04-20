@@ -1,0 +1,11 @@
+<h1>Services Page</h1>
+
+{{#each services as |service|}}
+  <div class="card mb-2">
+    <div class="card-body">
+      <h5 class="card-title">{{service.name}}</h5>
+      <a href="{{service.url}}">Más Información</a>
+    </div>
+  </div>
+
+{{/each}}
