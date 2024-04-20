@@ -70,10 +70,7 @@ app.get("/services/:service", (req, res) => {
   const service = req.params.service;
 
   const serviceData = services.find(
-    (servicio) =>
-      servicio.url ===
-      `/services/$
-    {service}`
+    (servicio) => servicio.url === `/services/${service}`
   );
 
   if (!serviceData) {
@@ -83,7 +80,7 @@ app.get("/services/:service", (req, res) => {
 });
 
 app.use("*", (req, res) => {
-  res.status(404).render("404", { title: "🥺 Page not found 🤷‍♂️" });
+  res.status(404).render("404", { title_error: "Pagina no encontrada" });
 });
 
 const PORT = process.env.PORT || 3000;
